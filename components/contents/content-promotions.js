@@ -9,8 +9,7 @@ class Promotions extends HTMLElement {
     async connectedCallback() {
         this.setLoadingState(); // ✅ แสดง Loading ระหว่างดึงข้อมูล
         try {
-            const response = await PromotionService.getPromotions();
-            this.promotions = response.data || []; // ✅ ดึง `data` จาก response
+            this.promotions = await PromotionService.getPromotions();
             this.render();
         } catch (error) {
             console.error("Error fetching promotions:", error);
@@ -66,7 +65,7 @@ class Promotions extends HTMLElement {
                             <h3 class="text-xl font-semibold text-gray-800 mb-4">${promo.title}</h3>
                             <img src="/mali-clear-clinic/assets/images/${promo.image}" 
                                 alt="${promo.title}" 
-                                class="w-full object-cover rounded-lg mb-4">
+                                class="w-full h-70 object-cover rounded-lg mb-4">
                             <p class="text-gray-600">${promo.description}</p>
                         </div>
                     `).join('')}
