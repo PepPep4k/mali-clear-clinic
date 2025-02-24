@@ -70,7 +70,7 @@ class ContentPromotionDetails extends HTMLElement {
                             <div>
                                 <img src="/mali-clear-clinic/assets/images/${this.promotion.image}" 
                                      alt="${this.promotion.title}"
-                                     class="w-full h-64 object-cover rounded-lg"
+                                     class="w-full h-full object-cover rounded-lg"
                                      onerror="this.onerror=null;this.src='/mali-clear-clinic/assets/images/default-image.jpg';">
                             </div>
                             <div>
