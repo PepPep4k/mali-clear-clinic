@@ -65,7 +65,7 @@ class Promotions extends HTMLElement {
                             <h3 class="text-xl font-semibold text-gray-800 mb-4">${promo.title}</h3>
                             <img src="/mali-clear-clinic/assets/images/${promo.image}" 
                                 alt="${promo.title}" 
-                                class="w-full h-full object-cover rounded-lg mb-4">
+                                class="w-full h-85 object-cover rounded-lg mb-4">
                             <p class="text-gray-600">${promo.description}</p>
                         </div>
                     `).join('')}
